@@ -1,0 +1,58 @@
+body {
+	font: $p-font;
+	color: $very-dark-blue;
+	overflow-x: hidden;
+}
+
+* {
+	outline: none;
+}
+
+h1, h2, h3, p {
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+h1, h1 a {
+	font: $h1-font;
+}
+
+h2, h2 a {
+	font: $h2-font;
+}
+
+h3, h3 a {
+	font: $h3-font;
+}
+
+p {
+	font: $p-font;
+	color: $grayish-violet;
+}
+
+a {
+	color: $grayish-violet;
+	text-decoration: none;
+	font-weight: $medium-weight;
+	@include ease-transition;
+
+	&:hover, &:focus {
+		opacity: 70%;
+	}
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
+}

@@ -1,0 +1,167 @@
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+    @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+    .#{$abbrev}-auto {
+        #{$prop}: auto !important;
+    }
+
+    .#{$abbrev}t-auto,
+    .#{$abbrev}y-auto {
+        #{$prop}-top: auto !important;
+    }
+
+    .#{$abbrev}r-auto,
+    .#{$abbrev}x-auto {
+        #{$prop}-right: auto !important;
+    }
+
+    .#{$abbrev}b-auto,
+    .#{$abbrev}y-auto {
+        #{$prop}-bottom: auto !important;
+    }
+
+    .#{$abbrev}l-auto,
+    .#{$abbrev}x-auto {
+        #{$prop}-left: auto !important;
+    }
+
+    @for $i from 0 through 10 {
+        $size: $i * 5;
+
+        .#{$abbrev}-#{$size} {
+            #{$prop}: #{$size}px !important;
+        }
+
+        .#{$abbrev}t-#{$size},
+        .#{$abbrev}y-#{$size} {
+            #{$prop}-top: #{$size}px !important;
+        }
+
+        .#{$abbrev}r-#{$size},
+        .#{$abbrev}x-#{$size} {
+            #{$prop}-right: #{$size}px !important;
+        }
+
+        .#{$abbrev}b-#{$size},
+        .#{$abbrev}y-#{$size} {
+            #{$prop}-bottom: #{$size}px !important;
+        }
+
+        .#{$abbrev}l-#{$size},
+        .#{$abbrev}x-#{$size} {
+            #{$prop}-left: #{$size}px !important;
+        }
+
+        @if $size != 0 {
+            .m-n#{$size} {
+                margin: -#{$size}px !important;
+            }
+            .mt-n#{$size},
+            .my-n#{$size} {
+                margin-top: -#{$size}px !important;
+            }
+
+            .mr-n#{$size},
+            .mx-n#{$size} {
+                margin-right: -#{$size}px !important;
+            }
+
+            .mb-n#{$size},
+            .my-n#{$size} {
+                margin-bottom: -#{$size}px !important;
+            }
+
+            .ml-n#{$size},
+            .mx-n#{$size} {
+                margin-left: -#{$size}px !important;
+            }
+        }
+    }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @each $prop, $abbrev in (margin: m, padding: p) {
+            .#{$abbrev}#{$infix}-auto {
+                #{$prop}: auto !important;
+            }
+
+            .#{$abbrev}t#{$infix}-auto,
+            .#{$abbrev}y#{$infix}-auto {
+                #{$prop}-top: auto !important;
+            }
+
+            .#{$abbrev}r#{$infix}-auto,
+            .#{$abbrev}x#{$infix}-auto {
+                #{$prop}-right: auto !important;
+            }
+
+            .#{$abbrev}b#{$infix}-auto,
+            .#{$abbrev}y#{$infix}-auto {
+                #{$prop}-bottom: auto !important;
+            }
+
+            .#{$abbrev}l#{$infix}-auto,
+            .#{$abbrev}x#{$infix}-auto {
+                #{$prop}-left: auto !important;
+            }
+
+            @for $i from 0 through 10 {
+                $size: $i * 5;
+
+                .#{$abbrev}#{$infix}-#{$size} {
+                    #{$prop}: #{$size}px !important;
+                }
+
+                .#{$abbrev}t#{$infix}-#{$size},
+                .#{$abbrev}y#{$infix}-#{$size} {
+                    #{$prop}-top: #{$size}px !important;
+                }
+
+                .#{$abbrev}r#{$infix}-#{$size},
+                .#{$abbrev}x#{$infix}-#{$size} {
+                    #{$prop}-right: #{$size}px !important;
+                }
+
+                .#{$abbrev}b#{$infix}-#{$size},
+                .#{$abbrev}y#{$infix}-#{$size} {
+                    #{$prop}-bottom: #{$size}px !important;
+                }
+
+                .#{$abbrev}l#{$infix}-#{$size},
+                .#{$abbrev}x#{$infix}-#{$size} {
+                    #{$prop}-left: #{$size}px !important;
+                }
+
+                @if $size != 0 {
+                    .m#{$infix}-n#{$size} {
+                        margin: -#{$size}px !important;
+                    }
+                    .mt#{$infix}-n#{$size},
+                    .my#{$infix}-n#{$size} {
+                        margin-top: -#{$size}px !important;
+                    }
+
+                    .mr#{$infix}-n#{$size},
+                    .mx#{$infix}-n#{$size} {
+                        margin-right: -#{$size}px !important;
+                    }
+
+                    .mb#{$infix}-n#{$size},
+                    .my#{$infix}-n#{$size} {
+                        margin-bottom: -#{$size}px !important;
+                    }
+
+                    .ml#{$infix}-n#{$size},
+                    .mx#{$infix}-n#{$size} {
+                        margin-left: -#{$size}px !important;
+                    }
+                }
+            }
+        }
+    }
+}

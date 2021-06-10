@@ -1,0 +1,38 @@
+.footer {
+	background-color: $very-dark-violet;
+	color: $white;
+	font-size: $small-font-size;
+}
+
+.footer-div {
+	* {
+		grid-column: span 2;
+	}
+
+	:first-child {
+		grid-column: span 4;
+	}
+}
+
+.footer-links {
+	margin-top: 20px;
+	color: $gray;
+
+	li {
+		margin-bottom: 5px;
+	}
+}
+
+.footer-socials {
+	display: flex;
+	align-items: center;
+	height: fit-content;
+
+	img {
+		width: 25px;
+	}
+
+	:not(:last-child) {
+		margin-right: 25px;
+	}
+}

@@ -1,0 +1,22 @@
+.jumbotron {
+	align-items: center;	
+}
+
+.jumbotron-content {
+	grid-column: span 7;
+	align-items: center;
+
+	p {
+		font-size: $large-font-size;
+		line-height: 1.6;
+	}
+}
+
+.jumbotron-img {
+	grid-column: span 5;
+	
+	img {
+		width: 730px;
+	}
+}
+

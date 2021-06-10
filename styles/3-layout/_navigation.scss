@@ -1,0 +1,19 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 0 20px;
+	font-size: $small-font-size;
+
+	ul {
+		display: flex;
+		align-items: center;
+	}
+
+	li:not(:last-child) {
+		padding-right: 30px;
+	}
+
+	li.nav-logo {
+		padding-right: 50px;
+	}
+}

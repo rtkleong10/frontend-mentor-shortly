@@ -1,0 +1,38 @@
+.shorten-bg {
+	background-color: $dark-violet;
+	background-image: url("../../images/bg-shorten-desktop.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px;
+	padding: 50px 60px;
+	margin-top: -60px;
+	transform: translateY(-50%);
+}
+
+.shorten-content {
+	display: flex;
+
+	input {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		outline: none;
+
+		margin-right: 20px;
+		border: none;
+		border-radius: 10px;
+		padding: 10px 30px;
+
+		color: $very-dark-blue;
+		font: $p-font;
+		font-size: $medium-font-size;
+
+		@include placeholder {
+			color: $grayish-violet;
+		}
+	}
+
+	button {
+		flex-shrink: 0;
+	}
+}

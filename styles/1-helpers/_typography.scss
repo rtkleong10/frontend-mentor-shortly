@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+// Font Families
+$poppins: 'Poppins', "Trebuchet MS", Arial, sans-serif;
+
+// Font Weights
+$regular-weight: 400;
+$medium-weight: 500;
+$bold-weight: 700;
+
+// Font Sizes
+$large-font-size: 22px;
+$medium-font-size: 20px;
+$normal-font-size: 18px;
+$small-font-size: 15px;
+
+// Fonts
+$h1-font: $bold-weight 76px/1.2 $poppins;
+$h2-font: $bold-weight 38px/1.6 $poppins;
+$h3-font: $bold-weight 22px/1.6 $poppins;
+$p-font: $regular-weight 18px/1.8 $poppins;

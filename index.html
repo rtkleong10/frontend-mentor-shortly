@@ -5,125 +5,145 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- displays site properly based on user's device -->
-
+	<link rel="stylesheet" href="./styles/index.min.css">
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
 	<title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-
-	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-	<style>
-		.attribution {
-			font-size: 11px;
-			text-align: center;
-		}
-
-		.attribution a {
-			color: hsl(228, 45%, 44%);
-		}
-	</style>
 </head>
 
 <body>
 	<header>
-		<img src="./images/logo.svg" alt="Shortly">
-		<nav>
-			<ul>
-				<li><a href="./features">Features</a></li>
-				<li><a href="./pricing">Pricing</a></li>
-				<li><a href="./resources">Resources</a></li>
-			</ul>
-			<ul>
-				<li><a href="./login">Login</a></li>
-				<li><a href="./sign-up">Sign Up</a></li>
-			</ul>
-		</nav>
+		<div class="container-no-padding">
+			<nav class="navbar">
+				<ul class="left">
+					<li class="nav-logo"><a href="#"><img src="./images/logo.svg" alt="Shortly"></a></li>
+					<li><a href="./features">Features</a></li>
+					<li><a href="./pricing">Pricing</a></li>
+					<li><a href="./resources">Resources</a></li>
+				</ul>
+				<ul>
+					<li><a href="./login">Login</a></li>
+					<li><a class="btn btn-sm" href="./sign-up">Sign Up</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 	<section>
-		<div>
-			<h1>More than just shorter links</h1>
-			<p>
-				Build your brand’s recognition and get detailed insights on how your links are performing.
-			</p>
-			<a href="./sign-up">Get Started</a>
-		</div>
-		<div>
-			<img src="./images/illustration-working.svg" alt="Women using a computer at a desk">
-		</div>
-	</section>
-	<section>
-		<form action="">
-			<input type="text" placeholder="Shorten a link here...">
-			<button type="submit">Shorten It!</button>
-		</form>
-	</section>
-	<section>
-		<div>
-			<h2>Advanced Statistics</h2>
-			<p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
-		</div>
-		<div>
-			<div>
-				<img src="./images/icon-brand-recognition.svg" alt="Line and bar chart">
-				<h3>Brand Recognition</h3>
-				<p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
-			</div>
-			<div>
-				<img src="./images/icon-detailed-records.svg" alt="Compass">
-				<h3>Detailed Records</h3>
-				<p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
-			</div>
-			<div>
-				<img src="./images/icon-fully-customizable.svg" alt="Artistic tools">
-				<h3>Fully Customizable</h3>
-				<p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+		<div class="container">
+			<div class="jumbotron grid">
+				<div class="jumbotron-content">
+					<div class="mb-30">
+						<h1 class="mb-n5">
+							More than just<br>
+							shorter links
+						</h1>
+						<p>
+							Build your brand’s recognition and get detailed<br>
+							insights on how your links are performing.
+						</p>
+					</div>
+					<a class="btn" href="./sign-up">Get Started</a>
+				</div>
+				<div class="jumbotron-img">
+					<img src="./images/illustration-working.svg" alt="Women using a computer at a desk">
+				</div>
 			</div>
 		</div>
 	</section>
 	<section>
-		<div>
-			<h2>Boost your links today</h2>
-			<a href="./sign-up">Get Started</a>
+		<div class="light-blue-bg">
+			<div class="container">
+				<div class="shorten-bg mb-30">
+					<form class="shorten-content" action="">
+						<input type="text" placeholder="Shorten a link here...">
+						<button class="btn btn-rect" type="submit">Shorten It!</button>
+					</form>
+				</div>
+
+				<div class="center">
+					<h2>Advanced Statistics</h2>
+					<p>
+						Track how your links are performing across the web with<br>
+						our advanced statistics dashboard.
+					</p>
+				</div>
+				<div class="grid adv-stats-items">
+					<div class="adv-stats-item">
+						<div class="adv-stats-icon">
+							<img src="./images/icon-brand-recognition.svg" alt="Line and bar chart">
+						</div>
+						<h3>Brand Recognition</h3>
+						<p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
+					</div>
+					<div class="adv-stats-item">
+						<div class="adv-stats-icon">
+							<img src="./images/icon-detailed-records.svg" alt="Compass">
+						</div>
+						<h3>Detailed Records</h3>
+						<p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+					</div>
+					<div class="adv-stats-item">
+						<div class="adv-stats-icon">
+							<img src="./images/icon-fully-customizable.svg" alt="Artistic tools">
+						</div>
+						<h3>Fully Customizable</h3>
+						<p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
-	<footer>
-		<div>
-			<img src="./images/logo.svg" alt="Shortly">
-			<div>
-				<strong>Features</strong>
-				<ul>
-					<li>Link Shortening</li>
-					<li>Branded Links</li>
-					<li>Analytics</li>
-				</ul>
-			</div>
-			<div>
-				<strong>Resources</strong>
-				<ul>
-					<li>Blog</li>
-					<li>Developers</li>
-					<li>Support</li>
-				</ul>
-			</div>
-			<div>
-				<strong>Company</strong>
-				<ul>
-					<li>About</li>
-					<li>Our Team</li>
-					<li>Careers</li>
-					<li>Contact</li>
-				</ul>
-			</div>
-			<div>
-				<a href="https://www.facebook.com/shortly"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
-				<a href="https://www.twitter.com/shortly"><img src="./images/icon-twitter.svg" alt="Twitter"></a>
-				<a href="http://www.pinterest.com/shortly"><img src="./images/icon-pinterest.svg" alt="Pinterest"></a>
-				<a href="https://www.instagram.com/shortly"><img src="./images/icon-instagram.svg" alt="Instagram"></a>
+	<section>
+		<div class="boost-bg">
+			<div class="container">
+				<div class="center">
+					<h2 class="mb-10">Boost your links today</h2>
+					<a class="btn" href="./sign-up">Get Started</a>
+				</div>
 			</div>
 		</div>
-		<div class="attribution">
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-div grid">
+				<img src="./images/logo-white.svg" alt="Shortly">
+				<div>
+					<strong>Features</strong>
+					<ul class="footer-links">
+						<li><a href="./link-shortening">Link Shortening</a></li>
+						<li><a href="./branded-links">Branded Links</a></li>
+						<li><a href="./analytics">Analytics</a></li>
+					</ul>
+				</div>
+				<div>
+					<strong>Resources</strong>
+					<ul class="footer-links">
+						<li><a href="./blog">Blog</a></li>
+						<li><a href="./developers">Developers</a></li>
+						<li><a href="./support">Support</a></li>
+					</ul>
+				</div>
+				<div>
+					<strong>Company</strong>
+					<ul class="footer-links">
+						<li><a href="./about">About</a></li>
+						<li><a href="./our-team">Our Team</a></li>
+						<li><a href="./careers">Careers</a></li>
+						<li><a href="./contact">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footer-socials">
+					<a href="https://www.facebook.com/shortly"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
+					<a href="https://www.twitter.com/shortly"><img src="./images/icon-twitter.svg" alt="Twitter"></a>
+					<a href="http://www.pinterest.com/shortly"><img src="./images/icon-pinterest.svg" alt="Pinterest"></a>
+					<a href="https://www.instagram.com/shortly"><img src="./images/icon-instagram.svg" alt="Instagram"></a>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="attribution">
 			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 			Coded by <a href="https://rtkleong10.github.io/">Tiffany Leong</a>.
-		</div>
+		</div> -->
 	</footer>
 </body>
 

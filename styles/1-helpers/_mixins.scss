@@ -1,0 +1,13 @@
+@mixin placeholder {
+    &::-webkit-input-placeholder { /* Edge */
+        @content;
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        @content;
+    }
+
+    &::placeholder {
+        @content;
+    }
+}

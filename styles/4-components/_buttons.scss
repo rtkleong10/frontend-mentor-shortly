@@ -1,0 +1,25 @@
+.btn {
+	display: inline-block;
+	background-color: $cyan;
+	padding: 10px 40px;
+	border-radius: 9999px;
+	color: $white;
+	font-weight: $medium-weight;
+	font-size: $medium-font-size;
+	@include ease-transition;
+
+	&:hover, &:focus {
+		background-color: $very-dark-blue;
+	}
+
+	&.btn-rect {
+		border-radius: 10px;
+		padding: 20px 45px;
+	}
+
+	&.btn-sm {
+		padding: 5px 25px;
+		font-weight: $medium-weight;
+		font-size: $small-font-size;
+	}
+}
