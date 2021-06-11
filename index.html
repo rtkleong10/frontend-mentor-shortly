@@ -39,14 +39,16 @@
 							<div></div>
 						</div>
 					</div>
-					<ul id="mobile-menu-dropdown">
-						<li><a href="./features">Features</a></li>
-						<li><a href="./pricing">Pricing</a></li>
-						<li><a href="./resources">Resources</a></li>
-						<li><hr></li>
-						<li><a href="./login">Login</a></li>
-						<li><a class="btn" href="./sign-up">Sign Up</a></li>
-					</ul>
+					<div id="mobile-menu-dropdown">
+						<ul>
+							<li><a class="nav-link" href="./features">Features</a></li>
+							<li><a class="nav-link" href="./pricing">Pricing</a></li>
+							<li><a class="nav-link" href="./resources">Resources</a></li>
+							<li><hr></li>
+							<li><a class="nav-link" href="./login">Login</a></li>
+							<li><a class="btn" href="./sign-up">Sign Up</a></li>
+						</ul>
+					</div>
 				</div>
 			</nav>
 		</div>
@@ -57,7 +59,7 @@
 				<div class="jumbotron grid">
 					<div class="jumbotron-content">
 						<div class="mb-30">
-							<h1 class="mb-5 mb-xl-n5">
+							<h1 class="mb-5 mb-xl-0">
 								More than just<br class="br-lg">
 								shorter links
 							</h1>
@@ -79,37 +81,37 @@
 		<div class="light-blue-bg">
 			<div class="container">
 				<div class="shorten-bg">
-					<form class="shorten-content" action="">
+					<form id="shorten-form">
 						<div>
-							<input type="text" placeholder="Shorten a link here...">
+							<input type="text" placeholder="Shorten a link here..." id="shorten-original-link">
 						</div>
 						<button class="btn" type="submit">Shorten It!</button>
 					</form>
 				</div>
 				<div id="shorten-outputs">
-					<!-- <div class="shorten-output">
+					<div class="shorten-output">
 						<p class="shorten-long-link">https://www.frontendmentor.io</p>
 						<div>
 							<p class="shorten-short-link">https://re.ink/k4lKyk</p>
-							<button class="btn">Copy</button>
+							<button class="btn" data-url="https://re.ink/k4lKyk" onclick="copyFunc(this)"></button>
 						</div>
 					</div>
 					<div class="shorten-output">
 						<p class="shorten-long-link">https://twitter.com/frontendmentor</p>
 						<div>
 							<p class="shorten-short-link">https://re.ink/gxOXp9</p>
-							<button class="btn" disabled>Copied!</button>
+							<button class="btn shorten-copied" data-url="https://re.ink/gxOXp9" onclick="copyFunc(this)"></button>
 						</div>
 					</div>
 					<div class="shorten-output">
 						<p class="shorten-long-link">https://www.linkedin.com/company/frontend-mentor</p>
 						<div>
 							<p class="shorten-short-link">https://re.ink/gob3X9</p>
-							<button class="btn">Copy</button>
+							<button class="btn" data-url="https://re.ink/gob3X9" onclick="copyFunc(this)"></button>
 						</div>
-					</div> -->
+					</div>
 				</div>
-				<div class="center mt-100">
+				<div class="center mt-60 mt-lg-100">
 					<h2>Advanced Statistics</h2>
 					<p>
 						Track how your links are performing across the web with<br class="br-lg">
@@ -149,7 +151,7 @@
 		<div class="boost-bg">
 			<div class="container">
 				<div class="center">
-					<h2 class="mb-10">Boost your links today</h2>
+					<h2 class="mb-20">Boost your links today</h2>
 					<a class="btn" href="./sign-up">Get Started</a>
 				</div>
 			</div>
@@ -209,6 +211,7 @@
 			Coded by <a href="https://rtkleong10.github.io/">Tiffany Leong</a>.
 		</div>
 	</footer>
+	<script src="js/app.js"></script>
 </body>
 
 </html>

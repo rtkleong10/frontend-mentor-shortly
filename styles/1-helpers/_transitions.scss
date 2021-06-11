@@ -1,7 +1,7 @@
-@mixin ease-transition($property) {
-	-webkit-transition: 0.3s ease-in-out $property;
-	-moz-transition: 0.3s ease-in-out $property;
-	-ms-transition: 0.3s ease-in-out $property;
-	-o-transition: 0.3s ease-in-out $property;
-	transition: 0.3s ease-in-out $property;
+@mixin ease-transition($property, $timing: 0.3s) {
+	-webkit-transition: $timing ease-in-out $property;
+	-moz-transition: $timing ease-in-out $property;
+	-ms-transition: $timing ease-in-out $property;
+	-o-transition: $timing ease-in-out $property;
+	transition: $timing ease-in-out $property;
 }

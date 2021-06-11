@@ -110,7 +110,7 @@
                 #{$prop}-left: auto !important;
             }
 
-            @for $i from 0 through 10 {
+            @for $i from 0 through 20 {
                 $size: $i * 5;
 
                 .#{$abbrev}#{$infix}-#{$size} {
