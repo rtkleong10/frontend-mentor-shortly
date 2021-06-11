@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- displays site properly based on user's device -->
+	<meta name="description" content="This is Tiffany Leong's solution to the Shortly URL shortening API Challenge challenge on Frontend Mentor.">
 	<link rel="stylesheet" href="./styles/index.min.css">
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -33,7 +33,7 @@
 							<li class="nav-logo"><a href="#"><img src="./images/logo.svg" alt="Shortly"></a></li>
 						</ul>
 						<div class="nav-hamburger">
-							<input id="mobile-menu-toggle" type="checkbox" />
+							<input id="mobile-menu-toggle" type="checkbox" aria-label="Mobile menu toggle" />
 							<div></div>
 							<div></div>
 							<div></div>
@@ -83,7 +83,7 @@
 				<div class="shorten-bg">
 					<form id="shorten-form">
 						<div>
-							<input type="text" placeholder="Shorten a link here..." id="shorten-original-link">
+							<input type="text" placeholder="Shorten a link here..." id="shorten-original-link" aria-label="Link to be shortened">
 						</div>
 						<button class="btn" type="submit">Shorten It!</button>
 					</form>
@@ -118,7 +118,7 @@
 						our advanced statistics dashboard.
 					</p>
 				</div>
-				<div class="grid adv-stats-items">
+				<div class="adv-stats-items">
 					<div class="adv-stats-item">
 						<div class="adv-stats-icon">
 							<img src="./images/icon-brand-recognition.svg" alt="Line and bar chart">
@@ -187,19 +187,19 @@
 					</ul>
 				</div>
 				<div class="footer-socials">
-					<a class="footer-social" href="https://www.facebook.com/shortly">
+					<a class="footer-social" href="https://www.facebook.com/shortly" rel="noopener noreferrer">
 						<img src="./images/icon-facebook.svg" alt="Facebook">
 						<img src="./images/icon-facebook-cyan.svg" alt="Facebook">
 					</a>
-					<a class="footer-social" href="https://www.twitter.com/shortly">
+					<a class="footer-social" href="https://www.twitter.com/shortly" rel="noopener noreferrer">
 						<img src="./images/icon-twitter.svg" alt="Twitter">
 						<img src="./images/icon-twitter-cyan.svg" alt="Twitter">
 					</a>
-					<a class="footer-social" href="http://www.pinterest.com/shortly">
+					<a class="footer-social" href="http://www.pinterest.com/shortly" rel="noopener noreferrer">
 						<img src="./images/icon-pinterest.svg" alt="Pinterest">
 						<img src="./images/icon-pinterest-cyan.svg" alt="Pinterest">
 					</a>
-					<a class="footer-social" href="https://www.instagram.com/shortly">
+					<a class="footer-social" href="https://www.instagram.com/shortly" rel="noopener noreferrer">
 						<img src="./images/icon-instagram.svg" alt="Instagram">
 						<img src="./images/icon-instagram-cyan.svg" alt="Instagram">
 					</a>
@@ -207,8 +207,8 @@
 			</div>
 		</div>
 		<div class="attribution">
-			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br>
-			Coded by <a href="https://rtkleong10.github.io/">Tiffany Leong</a>.
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noopener noreferrer">Frontend Mentor</a>.<br>
+			Coded by <a href="https://rtkleong10.github.io/" rel="noopener noreferrer">Tiffany Leong</a>.
 		</div>
 	</footer>
 	<script src="js/app.js"></script>
