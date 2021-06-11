@@ -7,4 +7,9 @@
 	h2 {
 		color: $white;
 	}
+	
+	@include media-breakpoint-down("sm") {
+		padding: 40px 0;
+		background-image: url("../images/bg-boost-mobile.svg");
+	}
 }

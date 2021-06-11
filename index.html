@@ -14,7 +14,7 @@
 <body>
 	<header>
 		<div class="container-no-padding">
-			<nav class="navbar">
+			<nav class="desktop-navbar navbar">
 				<ul class="left">
 					<li class="nav-logo"><a href="#"><img src="./images/logo.svg" alt="Shortly"></a></li>
 					<li><a href="./features">Features</a></li>
@@ -26,26 +26,51 @@
 					<li><a class="btn btn-sm" href="./sign-up">Sign Up</a></li>
 				</ul>
 			</nav>
+			<nav>
+				<div class="mobile-navbar">
+					<div class="navbar">
+						<ul class="left">
+							<li class="nav-logo"><a href="#"><img src="./images/logo.svg" alt="Shortly"></a></li>
+						</ul>
+						<div class="nav-hamburger">
+							<input id="mobile-menu-toggle" type="checkbox" />
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+					<ul id="mobile-menu-dropdown">
+						<li><a href="./features">Features</a></li>
+						<li><a href="./pricing">Pricing</a></li>
+						<li><a href="./resources">Resources</a></li>
+						<li><hr></li>
+						<li><a href="./login">Login</a></li>
+						<li><a class="btn" href="./sign-up">Sign Up</a></li>
+					</ul>
+				</div>
+			</nav>
 		</div>
 	</header>
 	<section>
-		<div class="container">
-			<div class="jumbotron grid">
-				<div class="jumbotron-content">
-					<div class="mb-30">
-						<h1 class="mb-n5">
-							More than just<br>
-							shorter links
-						</h1>
-						<p>
-							Build your brand’s recognition and get detailed<br>
-							insights on how your links are performing.
-						</p>
+		<div class="jumbotron-bg">
+			<div class="container">
+				<div class="jumbotron grid">
+					<div class="jumbotron-content">
+						<div class="mb-30">
+							<h1 class="mb-5 mb-xl-n5">
+								More than just<br class="br-lg">
+								shorter links
+							</h1>
+							<p>
+								Build your brand’s recognition and get detailed<br class="br-xl">
+								insights on how your links are performing.
+							</p>
+						</div>
+						<a class="btn" href="./sign-up">Get Started</a>
 					</div>
-					<a class="btn" href="./sign-up">Get Started</a>
-				</div>
-				<div class="jumbotron-img">
-					<img src="./images/illustration-working.svg" alt="Women using a computer at a desk">
+					<div class="jumbotron-img">
+						<img src="./images/illustration-working.svg" alt="Women using a computer at a desk">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -53,17 +78,16 @@
 	<section>
 		<div class="light-blue-bg">
 			<div class="container">
-				<div class="shorten-bg mb-30">
+				<div class="shorten-bg mb-md-30">
 					<form class="shorten-content" action="">
 						<input type="text" placeholder="Shorten a link here...">
-						<button class="btn btn-rect" type="submit">Shorten It!</button>
+						<button class="btn" type="submit">Shorten It!</button>
 					</form>
 				</div>
-
 				<div class="center">
 					<h2>Advanced Statistics</h2>
 					<p>
-						Track how your links are performing across the web with<br>
+						Track how your links are performing across the web with<br class="br-lg">
 						our advanced statistics dashboard.
 					</p>
 				</div>
@@ -73,21 +97,24 @@
 							<img src="./images/icon-brand-recognition.svg" alt="Line and bar chart">
 						</div>
 						<h3>Brand Recognition</h3>
-						<p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
+						<p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links
+							help instil confidence in your content.</p>
 					</div>
 					<div class="adv-stats-item">
 						<div class="adv-stats-icon">
 							<img src="./images/icon-detailed-records.svg" alt="Compass">
 						</div>
 						<h3>Detailed Records</h3>
-						<p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+						<p>Gain insights into who is clicking your links. Knowing when and where people engage with your
+							content helps inform better decisions.</p>
 					</div>
 					<div class="adv-stats-item">
 						<div class="adv-stats-icon">
 							<img src="./images/icon-fully-customizable.svg" alt="Artistic tools">
 						</div>
 						<h3>Fully Customizable</h3>
-						<p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+						<p>Improve brand awareness and content discoverability through customizable links, supercharging
+							audience engagement.</p>
 					</div>
 				</div>
 			</div>
@@ -106,7 +133,7 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="footer-div grid">
-				<img src="./images/logo-white.svg" alt="Shortly">
+				<img class="footer-logo" src="./images/logo-white.svg" alt="Shortly">
 				<div>
 					<strong>Features</strong>
 					<ul class="footer-links">
@@ -135,15 +162,17 @@
 				<div class="footer-socials">
 					<a href="https://www.facebook.com/shortly"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
 					<a href="https://www.twitter.com/shortly"><img src="./images/icon-twitter.svg" alt="Twitter"></a>
-					<a href="http://www.pinterest.com/shortly"><img src="./images/icon-pinterest.svg" alt="Pinterest"></a>
-					<a href="https://www.instagram.com/shortly"><img src="./images/icon-instagram.svg" alt="Instagram"></a>
+					<a href="http://www.pinterest.com/shortly"><img src="./images/icon-pinterest.svg"
+							alt="Pinterest"></a>
+					<a href="https://www.instagram.com/shortly"><img src="./images/icon-instagram.svg"
+							alt="Instagram"></a>
 				</div>
 			</div>
 		</div>
-		<!-- <div class="attribution">
-			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+		<div class="attribution">
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br>
 			Coded by <a href="https://rtkleong10.github.io/">Tiffany Leong</a>.
-		</div> -->
+		</div>
 	</footer>
 </body>
 

@@ -1,3 +1,7 @@
+.jumbotron-bg {
+	overflow-x: hidden;
+}
+
 .jumbotron {
 	align-items: center;	
 }
@@ -5,7 +9,7 @@
 .jumbotron-content {
 	grid-column: span 7;
 	align-items: center;
-
+	
 	p {
 		font-size: $large-font-size;
 		line-height: 1.6;
@@ -20,3 +24,42 @@
 	}
 }
 
+@include media-breakpoint-down("xl") {
+	.jumbotron-content, .jumbotron-img {
+		grid-column: span 6;
+	}
+
+	.jumbotron-content p {
+		font-size: $normal-font-size;
+	}
+
+	.jumbotron-img img {
+		width: 650px;
+	}
+}
+
+@include media-breakpoint-down("lg") {
+	.jumbotron-img img {
+		width: 600px;
+	}
+}
+
+@include media-breakpoint-down("md") {
+	.jumbotron {
+		display: flex;
+		flex-direction: column-reverse;
+		text-align: center;
+		margin-top: -30px;
+	}
+
+	.jumbotron-img {
+		margin-bottom: 40px;
+
+		img {
+			width: 155%;
+			max-width: 520px;
+			margin: auto;
+			margin-right: -150px;
+		}
+	}
+}

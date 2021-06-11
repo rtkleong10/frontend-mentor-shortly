@@ -1,9 +1,15 @@
 .attribution {
-	padding-bottom: 20px;
+	padding: 0 20px 20px;
 	font-size: $small-font-size;
 	text-align: center;
 }
 
 .attribution a {
 	color: $cyan;
+}
+
+@include media-breakpoint-up("sm") {
+	br {
+		display: none;
+	}
 }
