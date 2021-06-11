@@ -35,6 +35,8 @@
 	display: flex;
 	align-items: center;
 	height: fit-content;
+	height: -moz-max-content;
+	height: -webkit-max-content; 
 
 	img {
 		width: 25px;
@@ -91,6 +93,8 @@
 	
 	.footer-logo, .footer-socials {
 		width: fit-content;
+		width: -moz-max-content;
+		width: -webkit-max-content; 
 		margin: auto;
 	}
 }

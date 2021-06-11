@@ -24,6 +24,8 @@
 	padding: 30px;
 	padding-top: 70px;
 	height: fit-content;
+	height: -moz-max-content;
+	height: -webkit-max-content; 
 	box-shadow: $raised-shadow;
 
 	p {
