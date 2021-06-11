@@ -46,14 +46,8 @@ p {
 }
 
 a {
-	color: $grayish-violet;
 	text-decoration: none;
-	font-weight: $medium-weight;
-	@include ease-transition(opacity);
-
-	&:hover, &:focus {
-		opacity: 60%;
-	}
+	color: $grayish-violet;
 }
 
 button {

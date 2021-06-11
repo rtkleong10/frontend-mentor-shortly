@@ -4,17 +4,16 @@
 	padding: 10px 40px;
 	border-radius: 9999px;
 	color: $white;
-	font-weight: $medium-weight;
+	font-weight: $bold-weight;
 	font-size: $medium-font-size;
-	@include ease-transition(opacity);
+	@include ease-transition(background-color);
 
 	&:hover, &:focus {
-		opacity: 60%;
+		background-color: $pale-cyan;
 	}
 
 	&.btn-sm {
-		padding: 5px 25px;
-		font-weight: $medium-weight;
+		padding: 7px 25px;
 		font-size: $small-font-size;
 	}
 }

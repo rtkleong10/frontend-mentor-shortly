@@ -5,6 +5,20 @@
 	font-size: $small-font-size;
 }
 
+.nav-logo {
+	margin-bottom: -5px;
+}
+
+.nav-link {
+	color: $grayish-violet;
+	font-weight: $bold-weight;
+	@include ease-transition(color);
+
+	&:hover, &:focus {
+		color: $dark-violet;
+	}
+}
+
 .desktop-navbar {
 	ul {
 		display: flex;
@@ -16,7 +30,7 @@
 	}
 
 	li.nav-logo {
-		margin-right: 50px;
+		margin-right: 45px;
 	}	
 }
 
