@@ -96,10 +96,7 @@
 	@include ease-transition(max-height, 0.5s);
 
 	&.visible {
-		display: block;
-		height: fit-content;
-		height: -moz-max-content;
-		height: -webkit-max-content; 
+		display: block; 
 		max-height: 1000px;
 	}
 
