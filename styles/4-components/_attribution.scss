@@ -12,4 +12,9 @@
 
 .attribution a {
 	color: $cyan;
+	@include ease-transition(color);
+
+	&:hover, &:focus {
+		color: $pale-cyan;
+	}
 }
