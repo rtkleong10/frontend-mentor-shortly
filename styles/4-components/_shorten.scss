@@ -7,17 +7,23 @@
 	padding: 50px 60px;
 	margin-top: -60px;
 	transform: translateY(-50%);
+	margin-bottom: -50px;
 }
 
 .shorten-content {
 	display: flex;
 
-	input {
+	> div {
 		display: block;
+		width: 100%;
+		margin-right: 20px;
+	}
+
+	input {
+		height: 100%;
 		width: 100%;
 		outline: none;
 
-		margin-right: 20px;
 		border: none;
 		border-radius: 10px;
 		padding: 10px 30px;
@@ -36,6 +42,90 @@
 		border-radius: 10px;
 		padding: 20px 45px;
 	}
+
+	.error {
+		position: relative;
+
+		input {
+			border: 3px $red solid;
+
+			@include placeholder {
+				color: rgba($red, 60%);
+			}
+		}
+
+		&::after {
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			transform: translateY(100%);
+
+			content: "Please add a link";
+			font-style: italic;
+			font-size: $small-font-size;
+			color: $red;
+		}
+	}
+}
+
+.shorten-output {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $white;
+	padding: 15px 30px;
+	box-shadow: $raised-shadow;
+	border-radius: 5px;
+	font-size: $large-font-size;
+
+	&:not(:last-child) {
+		margin-bottom: 15px;	
+	}
+
+	.shorten-long-link, .shorten-short-link {
+		font-weight: $medium-weight;
+	}
+
+	.shorten-long-link {
+		color: $dark-violet;
+		font-size: $medium-font-size;
+		margin-bottom: 0;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		padding-right: 30px;
+	}
+
+	.shorten-short-link {
+		color: $cyan;
+		margin-right: 20px;
+		font-size: $medium-font-size;
+	}
+
+	> div {
+		display: flex;
+		align-items: center;
+	}
+
+	button {
+		border-radius: 5px;
+		width: 100px;
+		padding: 12px;
+		font-size: $small-font-size;
+
+		&:disabled {
+			background-color: $dark-violet;
+		}
+	}
+}
+
+@include media-breakpoint-down("xl") {
+	.shorten-output {
+		.shorten-long-link, .shorten-short-link {
+			font-size: $normal-font-size;
+			font-weight: $regular-weight;
+		}
+	}
 }
 
 @include media-breakpoint-down("lg") {
@@ -48,11 +138,18 @@
 			font-size: $normal-font-size;
 		}
 	}
+
+	.shorten-output {
+		.shorten-long-link, .shorten-short-link {
+			font-size: $small-font-size;
+		}
+	}
 }
 
 @include media-breakpoint-down("md") {
 	.shorten-bg {
 		background-image: url("../images/bg-shorten-mobile.svg");
+		margin-bottom: -60px;
 	}
 
 	.shorten-content {
@@ -73,6 +170,42 @@
 
 		input, button {
 			border-radius: 5px;
+		}
+
+		.error {
+			&::after {
+				position: static;
+				// margin-top: 5px;
+				font-size: $extra-small-font-size;
+			}
+		}
+	}
+
+	.shorten-output {
+		flex-direction: column;
+		align-items: normal;
+		padding: 0;
+
+		.shorten-long-link {
+			width: 100%;
+			padding: 15px;
+			padding-bottom: 10px;
+			border-bottom: 1px rgba($dark-violet, 10%) solid;
+		}
+
+		> div {
+			flex-direction: column;
+			align-items: normal;
+			padding-top: 10px;
+			padding: 15px;
+		}
+
+		.shorten-short-link {
+			margin-bottom: 10px;
+		}
+
+		button {
+			width: 100%;
 		}
 	}
 }

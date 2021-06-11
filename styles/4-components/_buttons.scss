@@ -6,10 +6,10 @@
 	color: $white;
 	font-weight: $medium-weight;
 	font-size: $medium-font-size;
-	@include ease-transition;
+	@include ease-transition(opacity);
 
 	&:hover, &:focus {
-		background-color: $very-dark-blue;
+		opacity: 60%;
 	}
 
 	&.btn-sm {
